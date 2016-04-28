@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-<link rel="stylesheet" href="http://dola.colorado.gov/cms-base/sites/dola.colorado.gov.gis-cms/files/projects/population/css/uniform.default.min.css" media="screen" />
+<link rel="stylesheet" href="https://dola.colorado.gov/cms-base/sites/dola.colorado.gov.gis-cms/files/projects/population/css/uniform.default.min.css" media="screen" />
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://dola.colorado.gov/gis-cms/sites/default/files/ctools/uniform/jquery.uniform.min.js"></script>				
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://dola.colorado.gov/gis-cms/sites/default/files/ctools/uniform/jquery.uniform.min.js"></script>
 
-
+<!--test me -->
 
 <style>
 
@@ -15,7 +15,7 @@ body {
   width: 960px;
 }
 
-		
+
 		#tooltip {
 		position: absolute;
 		width: 190px;
@@ -31,7 +31,7 @@ body {
 		pointer-events: none;
 		z-index:1000;
 		}
-		
+
 		svg{
 		margin:10px;
 		padding: 10px;
@@ -41,28 +41,28 @@ body {
 		-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 		-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 		box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
-	
+
 		}
 
-		
+
 		#tooltip.hidden{
 		display:none;
 		}
-		
+
 		#tooltip p {
 		margin: 0;
 		font-size: 16px;
 		line-height: 20px;
 		}
-			
 
-			
+
+
 			#yrbox{
 			left: 829px;
 			top: 300px;
 			width: 103px;
 			height: 50px;
-			position: absolute;	
+			position: absolute;
 			text-align:center;
                 background: white;
                 border-style:solid;
@@ -70,17 +70,17 @@ body {
                 border-color:#AAAAAA;
 				-webkit-border-radius: 4px;
 				-moz-border-radius: 4px;
-				border-radius: 4px;	
+				border-radius: 4px;
 			}
-			
+
 			#year {
 			margin:auto;
 			line-height:51px;
 			vertical-align:middle;
 			color: #111111;
 			}
-			
-			
+
+
 			#uniform-animate {
 			left: 836px;
 			top: 396px;
@@ -88,12 +88,12 @@ body {
 			color: blue;
 			}
 
-			
+
 			.button span{
 			line-height: 15px !important;
 			   text-shadow:0px 0px 1px #fff;
 			}
-			
+
 
 			#uniform-btn1870 {
 			left: 820px;
@@ -105,14 +105,14 @@ body {
 			left: 820px;
 			top: 454px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1890 {
 			left: 820px;
 			top: 482px;
 			position: absolute;
-			}	
-			
+			}
+
 
 			#uniform-btn1900 {
 			left: 820px;
@@ -124,68 +124,68 @@ body {
 			left: 820px;
 			top: 538px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1920 {
 			left: 820px;
 			top: 566px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1930 {
 			left: 820px;
 			top: 594px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1940 {
 			left: 820px;
 			top: 622px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1950 {
 			left: 880px;
 			top: 426px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1960 {
 			left: 880px;
 			top: 454px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1970 {
 			left: 880px;
 			top: 482px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1980 {
 			left: 880px;
 			top: 510px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn1990 {
 			left: 880px;
 			top: 538px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn2000 {
 			left: 880px;
 			top: 566px;
 			position: absolute;
-			}	
+			}
 
 			#uniform-btn2010 {
 			left: 880px;
 			top: 594px;
 			position: absolute;
-			}	
-		
+			}
+
 		.cinvis{
 		display: none;
 		}
@@ -193,14 +193,14 @@ body {
 		.cvis{
 		display: block;
 		}
-	
+
 	.region {
 	position: absolute;
 			width: 10px;
 			height: 10px;
 
 	}
-	
+
 	#cat1{
 	left: 833px;
 	top: 99px;
@@ -227,14 +227,14 @@ body {
 				background-color: rgb(56,108,176);
 	}
 
-	
-	
+
+
 		.reg2 {
 	position: absolute;
 				font-size: 11.5px;
 					color: #444444;
 	}
-	
+
 		#text1{
 	left: 846px;
 	top: 97px;
@@ -256,9 +256,9 @@ body {
 	top: 157px;
 	}
 
-	
-	
-	
+
+
+
 .tooltip, .tooltip-pending-removal {
   position: absolute;
   background-color: rgba(255,255,255,1);
@@ -324,7 +324,7 @@ body {
 		<div id="cat5" class="region"></div>
 		<div id="cat6" class="region"></div>
 		<div id="text1" class="reg2">Front Range</div>
-		<div id="text3" class="reg2">Central Mountains</div>		
+		<div id="text3" class="reg2">Central Mountains</div>
 		<div id="text2" class="reg2">Eastern Plains</div>
 		<div id="text4" class="reg2">Western Slope</div>
 		<div id="text5" class="reg2">San Luis Valley</div>
@@ -338,6 +338,6 @@ body {
 
 	<div id="yrbox">
 	<h2 id="year">1870</h2>
-	
-<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="js/poppie_bck.js"></script>
