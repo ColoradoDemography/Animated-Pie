@@ -35,6 +35,7 @@ var co1980=2889964;
 var co1990=3294394;
 var co2000=4301262;
 var co2010=5029196;	
+var co2020=5773714;
 	
 var arc = d3.svg.arc()
     .startAngle(function(d) { return d.x; })
@@ -116,7 +117,7 @@ function commafy(nStr) {
 		 .style("visibility", function(d) { 
 		 var retvar; 
 		 var curyear = parseInt(yearstr); 
-		 if(curyear>2010){retvar="";}else{var testvar = eval('d.size'+curyear); if(testvar>0){ retvar=""; }else{retvar="hidden";}}
+		 if(curyear>2020){retvar="";}else{var testvar = eval('d.size'+curyear); if(testvar>0){ retvar=""; }else{retvar="hidden";}}
 		 return retvar; })
 		.ease("linear");
 		
@@ -137,14 +138,14 @@ function commafy(nStr) {
   var curyear=parseInt($('#year').html());
   //alert(curyear);
   
-  if(curyear==2010){curyear=1870;}
+  if(curyear==2020){curyear=1870;}
   
   	timeout=1000;
   
 	curyear=curyear+10; 
 	turndata(String(curyear),0)
 	
-	if(curyear>2000){timeout=0;}
+	if(curyear>2010){timeout=0;}
   
   }
 
